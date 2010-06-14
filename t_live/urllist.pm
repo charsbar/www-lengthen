@@ -24,6 +24,13 @@ my %tests = (
   ShortenURL   => [ $ex_t => 'http://www.shortenurl.com/9ugbj' ],
   bitly        => [ $ex   => 'http://bit.ly/VDcn' ],
   isgd         => [ $ex   => 'http://is.gd/1NTB' ],
+  htly         => [ $ex   => 'http://ht.ly/1Yd65' ],
+  unu          => [ $ex   => 'http://u.nu/8g6' ],
+  owly         => [ $ex   => 'http://ow.ly/1YdwQ' ],
+  shadyurl     => [ $ex   => 'http://5z8.info/yourdick_hmn' ],
+  miudin       => [ $ex   => 'http://miud.in/6Hf' ],
+  urlchen      => [ $ex   => 'http://urlchen.de/jHxzE' ],
+  durlme       => [ $ex   => 'http://durl.me/y379' ],
 );
 
 sub basic_tests {

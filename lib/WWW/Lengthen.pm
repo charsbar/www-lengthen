@@ -8,15 +8,20 @@ our $VERSION = '0.07';
 
 our %KnownServices = (
   '0rz'            => qr{^http://0rz\.tw/.+},
-  haojp            => qr{^http://hao\.jp/.+},
   Metamark         => qr{^http://xrl\.us/.+},
   NotLong          => qr{^http://[\w\-]+\.notlong\.com/?$},
-  Smallr           => qr{^http://smallr\.com/.+},
   SnipURL          => qr{^http://snipurl\.com/.+},
   TinyURL          => qr{^http://tinyurl\.com/.+},
   snurl            => qr{^http://snurl\.com/.+},
   bitly            => qr{^http://bit\.ly/.+},
+  htly             => qr{^http://ht\.ly/.+},
   isgd             => qr{^http://is\.gd/.+},
+  unu              => qr{^http://u\.nu/.+},
+  owly             => qr{^http://ow\.ly/.+},
+  shadyurl         => qr{^http://5z8\.info/.+},
+  miudin           => qr{^http://miud\.in/.+},
+  urlchen          => qr{^http://urlchen\.de/.+},
+  durlme           => qr{^http://durl\.me/.+},
 );
 
 our %ExtraServices = (
@@ -41,6 +46,8 @@ our %DeadServices = (
   EkDk             => qr{^http://add\.redir\.ek\.dk/.+},
   MakeAShorterLink => qr{^http://tinyurl\.com/.+},
   LinkToolbot      => qr{^http://link\.toolbot\.com/.+},
+  haojp            => qr{^http://hao\.jp/.+},
+  Smallr           => qr{^http://smallr\.com/.+},
 );
 
 sub new {
