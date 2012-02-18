@@ -78,6 +78,20 @@ sub ua { shift->{ua} }
 sub try {
   my ($self, $url) = @_;
 
+  my $new_url;
+  my %seen;
+  my $max_try = 5;
+  while ($max_try--) {
+    $new_url = $self->_try($url);
+    return $new_url if $new_url eq $url or $seen{$new_url}++;
+    $url = $new_url;
+  }
+  return $url;
+}
+
+sub _try {
+  my ($self, $url) = @_;
+
   foreach my $name ( keys %{ $self->{services} } ) {
     my $service = $self->{services}->{$name};
     next unless $service;
