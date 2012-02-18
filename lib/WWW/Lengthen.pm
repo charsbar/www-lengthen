@@ -192,13 +192,7 @@ returns an LWP::UserAgent object used internally.
 
 =item 0rz (http://0rz.tw/)
 
-=item haojp (http://hao.jp/)
-
 =item Metamark (http://xrl.us/)
-
-=item NotLong (http://notlong.com/)
-
-=item Smallr (http://smallr.com/)
 
 =item SnipURL (http://snipurl.com/)
 
@@ -210,6 +204,12 @@ returns an LWP::UserAgent object used internally.
 
 =item is.gd (http://is.gd/)
 
+=item ow.ly/ht.ly (http://ow.ly/)
+
+=item urlchen (http://urlchen.de/)
+
+=item google (http://goo.gl/)
+
 =back
 
 =head2 Require WWW::Shorten subclasses
@@ -219,32 +219,6 @@ returns an LWP::UserAgent object used internally.
 =item OneShortLink (http://1sl.net/)
 
 =item Shorl (http://shorl.com/)
-
-=item Tinylink (http://tinylink.com/)
-
-# Tinylink may not be available now as WWW::Shorten marks this as "dead"
-
-=back
-
-=head2 Dead/Down/Too Heavy when I tested
-
-not tested but probably works with WWW::Shorten subclasses.
-
-=over 4
-
-=item I CAN HAZ dot COM (http://icanhaz.com/) (temporarily unavailable?)
-
-=item urlTea (http://urltea.com/) (temporarily unavailable?)
-
-=item BabyURL (http://babyurl.com/)
-
-=item Linkz (http://lin.kz/)
-
-=item TinyClick (http://tinyclick.com/)
-
-=item V3 (http://www.v3.net/)
-
-=item ShortenURL (http://www.shortenurl.com/)
 
 =back
 
