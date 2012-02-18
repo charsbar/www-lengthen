@@ -1,5 +1,11 @@
 Revision history for WWW-Lengthen
 
+0.08 2012/02/18
+  - disabled several dead or unreliable services
+  - added several redirect-only services including t.co (twitter)
+    and fb.me (facebook)
+  - supports lengthening a shortened url of a shortened url of ...
+
 0.07 2009/04/14
   - added is.gd, bit.ly, enabled shorl, and disabled icanhaz, urltea
   - added several services WWW::Shorten supports, and marked them
