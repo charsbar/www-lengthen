@@ -9,29 +9,33 @@ our $VERSION = '0.07';
 our %KnownServices = (
   '0rz'            => qr{^http://0rz\.tw/.+},
   Metamark         => qr{^http://xrl\.us/.+},
-  NotLong          => qr{^http://[\w\-]+\.notlong\.com/?$},
   SnipURL          => qr{^http://snipurl\.com/.+},
   TinyURL          => qr{^http://tinyurl\.com/.+},
   snurl            => qr{^http://snurl\.com/.+},
   bitly            => qr{^http://bit\.ly/.+},
   htly             => qr{^http://ht\.ly/.+},
   isgd             => qr{^http://is\.gd/.+},
-  unu              => qr{^http://u\.nu/.+},
   owly             => qr{^http://ow\.ly/.+},
-  shadyurl         => qr{^http://5z8\.info/.+},
-  miudin           => qr{^http://miud\.in/.+},
   urlchen          => qr{^http://urlchen\.de/.+},
-  durlme           => qr{^http://durl\.me/.+},
+  google           => qr{^http://goo\.gl/.+},
+);
+
+# Can't test, but widely used
+our %PartOfOtherServices = (
+  twitterco        => qr{^http://t\.co/.+},
+  hatena           => qr{^http://htn\.to/.+},
+  jmp              => qr{^http://j\.mp/.+},
+  tumblr           => qr{^http://tmblr\.co/.+},
+  facebook         => qr{^http://fb\.me/.+},
 );
 
 our %ExtraServices = (
   OneShortLink     => [ qr{^http://1sl\.net/.+}, 'OneShortLink' ],
-  Tinylink         => [ qr{^http://tinylink\.com/.+}, 'Tinylink' ],
   Shorl            => [ qr{^http://shorl\.com/.+}, 'Shorl' ],
 );
 
-# or maybe was down/too heavy when I tested
-our %DeadServices = (
+# not only dead but also failed anyhow when I tested
+our %UnsupportedOrDeadServices = (
   icanhaz          => qr{^http://icanhaz\.com/.+},
   urlTea           => qr{^http://urltea\.com/.+},
   BabyURL          => qr{^http://babyurl\.com/.+},
@@ -48,6 +52,12 @@ our %DeadServices = (
   LinkToolbot      => qr{^http://link\.toolbot\.com/.+},
   haojp            => qr{^http://hao\.jp/.+},
   Smallr           => qr{^http://smallr\.com/.+},
+  unu              => qr{^http://u\.nu/.+},
+  Tinylink         => [ qr{^http://tinylink\.com/.+}, 'Tinylink' ],
+  durlme           => qr{^http://durl\.me/.+},
+  NotLong          => qr{^http://[\w\-]+\.notlong\.com/?$},
+  shadyurl         => qr{^http://5z8\.info/.+},
+  miudin           => qr{^http://miud\.in/.+},
 );
 
 sub new {
@@ -56,11 +66,12 @@ sub new {
   my %services;
   if ( @_ ) {
     foreach my $name ( @_ ) {
-      $services{$name} = $KnownServices{$name};
+      $services{$name} = $PartOfOtherServices{$name}
+                      || $KnownServices{$name};
     }
   }
   else {
-    %services = %KnownServices;
+    %services = (%KnownServices, %PartOfOtherServices);
   }
 
   my $ua = LWP::UserAgent->new(
