@@ -30,7 +30,6 @@ our %PartOfOtherServices = (
 );
 
 our %ExtraServices = (
-  OneShortLink     => [ qr{^https?://1sl\.net/.+}, 'OneShortLink' ],
   Shorl            => [ qr{^https?://shorl\.com/.+}, 'Shorl' ],
 );
 
@@ -58,6 +57,7 @@ our %UnsupportedOrDeadServices = (
   NotLong          => qr{^https?://[\w\-]+\.notlong\.com/?$},
   shadyurl         => qr{^https?://5z8\.info/.+},
   miudin           => qr{^https?://miud\.in/.+},
+  OneShortLink     => [ qr{^https?://1sl\.net/.+}, 'OneShortLink' ],
 );
 
 sub new {
