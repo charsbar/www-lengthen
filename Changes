@@ -1,5 +1,8 @@
 Revision history for WWW-Lengthen
 
+0.09 2016/10/04
+  - added a support for https-urls (with a patch by Kivanc Yazan)
+
 0.08 2012/02/18
   - disabled several dead or unreliable services
   - added several redirect-only services including t.co (twitter)
