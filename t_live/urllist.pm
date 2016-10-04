@@ -12,7 +12,7 @@ my %tests = (
   '0rz'        => [ $ex_t => 'http://0rz.tw/443v7' ],
   Metamark     => [ $ex   => 'http://xrl.us/bdgj9' ],
   SnipURL      => [ $ex   => 'http://snipurl.com/1vv5c' ],
-  TinyURL      => [ $ex   => 'http://tinyurl.com/kotu' ],
+  TinyURL      => [ $ex_t => 'http://tinyurl.com/4o6x2s' ],
   snurl        => [ $ex   => 'http://snurl.com/fuz4q' ],
   OneShortLink => [ $ex   => 'http://1sl.net/1239' ],
   Shorl        => [ $ex   => 'http://shorl.com/fylevihehyra' ],
